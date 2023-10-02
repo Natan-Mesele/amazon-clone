@@ -1,19 +1,21 @@
 import React from 'react'
 import styled from "styled-components"
 
-function Product() {
+function Product(props) {
+
+
   return (
     <Container>
         <Title>
-          Gaming accessories
+          {props.title}
         </Title>
         <Price>
-          $30
+          ${props.price}
         </Price>
         <Rating>
-          ⭐⭐⭐⭐⭐
+          {props.raing}
         </Rating>
-        <Image src="img/tab.jpg"/>
+        <Image src={props.image}/>
         <ActionSection>
           <AddToCartButton>
             Add to Cart
